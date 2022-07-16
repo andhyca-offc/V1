@@ -1,9 +1,10 @@
 /**
-* SCRIPT BOT ORI by hyzer official
-* CREATOR BY ArullOfc
-* MAU BANYAK LAGI FITUR NYA 
-* RECODE SENDIRI BANH JANGAN MAU ENAK AJA
-* NOTE MASIH ADA BUG STIKER DAN LAIN 
+* create by hyzer official
+* g usah di hapus anjg, gw cape sumpah
+* sc free, bayar pake subs aja udh good
+* jika ada bug/mau request fitur
+* chat me on wa https://wa.me/6287892711054
+* follow my instagram @zexyds_
 **/
 
 //━━━━━━━━[ DEFAULT SETTINGS ]━━━━━━━━//
@@ -21,8 +22,7 @@ let moment = require('moment-timezone')
 //━━━━━━━━[ DEFAULT MENU ]━━━━━━━━//
 const defaultMenu = {
   before:`
-┅━━━━━═┅═❏ *DASHBOARD* ❏═┅═━━━━━┅
-❏═┅═━–〈 *U S E R*
+┅═━–〈 *U S E R*
 ┊• *Name:* %name
 ┊• *Limit:* %limit
 ┊• *Role:* %role
@@ -38,7 +38,7 @@ const defaultMenu = {
 ┊• *Time:* %time
 ┗––––––––––✦
 
-❏═┅═━–〈 *D A T A B A S E*
+❏═┅═━–〈 *I N F O*
 ┊• *Runtime:* %uptime
 ┊• *Database:* %rtotalreg 𝚍𝚊𝚛𝚒 %totalreg 
 ┊• *Memory Used:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
@@ -51,10 +51,9 @@ const defaultMenu = {
 
 
 %readmore`.trimStart(), 
-  header: '╭─㉿ 〔 %category 〕 ㉿─\n┃',
-  body: '┃⫹⫺ %cmd %islimit %isPremium',
-  footer: '┃\n╰────────㉿\n', 
-  footerText: 'Powered by ᯤ ʀɪᴇʟɢᴀɴs ᴏғᴄ',
+  header: '❏––––––『 *%category* 』––––––',
+  body: '┊✦ %cmd %islimit %isPremium',
+  footer: '┗━═┅═━––––––๑\n', 
   after: ``,
 }
 
@@ -65,83 +64,83 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let arrayMenu = ['all', 'absen', 'rpg', 'anime', 'downloader', 'game', 'fun', 'xp', 'github', 'group', 'image', 'quotes', 'admin', 'info', 'internet', 'islam', 'kerang', 'maker', 'owner', 'suara', 'premium', 'quotes', 'info', 'stalk', 'shortlink', 'sticker', 'tools', 'text', 'nsfw', 'asupan', 'random', 'textpro', 'photooxy']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-  'main': 'UTAMA',
+  'main': 'MENU UTAMA',
   'advanced': 'ADVANCED',
-  'absen': 'ABSEN',
-  'anime': 'ANIME',
-  'sticker': 'STICKER & CONVERT',
-  'downloader': 'DOWNLOADER',
-  'xp': 'EXP & LIMIT',
-  'fun': 'FUN',
-  'game': 'GAME',
-  'github': 'GITHUB',
-  'group': 'GROUP',
-  'image': 'IMAGE',
-  'info': 'INFO',
+  'absen': 'MENU ABSEN',
+  'anime': 'MENU ANIME',
+  'sticker': 'MENU CONVERT',
+  'downloader': 'MENU DOWNLOADER',
+  'xp': 'MENU EXP',
+  'fun': 'MENU FUN',
+  'game': 'MENU GAME',
+  'github': 'MENU GITHUB',
+  'group': 'MENU GROUP',
+  'image': 'MENU IMAGE',
+  'info': 'MENU INFO',
   'internet': 'INTERNET',
-  'islam' : 'ISLAMI',
-  'kerang': 'KERANG',
-  'maker': 'MAKER',
-  'owner': 'OWNER',
+  'islam' : 'MENU ISLAMI',
+  'kerang': 'MENU KERANG',
+  'maker': 'MENU MAKER',
+  'owner': 'MENU OWNER',
   'Pengubah Suara': 'PENGUBAH SUARA',
-  'premium': 'PREMIUM',
-  'quotes' : 'QUOTES',
-  'rpg': 'RPG',
-  'stalk': 'STALK',
+  'premium': 'PREMIUM MENU',
+  'quotes' : 'MENU QUOTES',
+  'rpg': 'MENU RPG',
+  'stalk': 'MENU STALK',
   'shortlink': 'SHORT LINK',
-  'tools': 'TOOLS',
-  'vote': 'VOTING',
-  'nsfw': 'NSFW', 
-  'asupan': 'ASUPAN', 
-  'random': 'RANDOM', 
-  'textpro': 'TEXT PRO', 
-  'photooxy': 'PHOTO OXY', 
+  'tools': 'MENU TOOLS',
+  'vote': 'MENU VOTING',
+  'nsfw': 'NSFW MENU', 
+  'asupan': 'ASUPAN MENU', 
+  'random': 'RANDOM MENU', 
+  'textpro': 'TEXT PRO MENU', 
+  'photooxy': 'PHOTO OXY MENU', 
   }
   if (teks == 'absen') tags = {
-    'absen': 'ABSEN',
-    'vote': 'VOTING',
+    'absen': 'MENU ABSEN',
+    'vote': 'MENU VOTING',
   }
   if (teks == 'anime') tags = {
-  'anime': 'MANIME',
+  'anime': 'MENU ANIME',
   }
   if (teks == 'sticker') tags = {
-  'sticker': 'STICKER &CONVERT',
+  'sticker': 'MENU CONVERT',
   }
   if (teks == 'downloader') tags = {
-  'downloader': 'DOWNLOADER',
+  'downloader': 'MENU DOWNLOADER',
   }
   if (teks == 'xp') tags = {
-  'xp': 'EXP & LIMIT',
+  'xp': 'MENU EXP',
   }
   if (teks == 'fun') tags = {
   'fun': 'MENU FUN',
   }
   if (teks == 'game') tags = {
-  'game': 'GAME',
+  'game': 'MENU GAME',
   }
   if (teks == 'github') tags = {
-  'github': 'GITHUB',
+  'github': 'MENU GITHUB',
   }
   if (teks == 'group') tags = {
-  'group': 'GROUP',
+  'group': 'MENU GROUP',
   }
   if (teks == 'image') tags = {
-  'image': 'IMAGE',
+  'image': 'MENU IMAGE',
   }
   if (teks == 'info') tags = {
-  'info': 'INFO',
+  'info': 'MENU INFO',
   }
   if (teks == 'internet') tags = {
   'internet': 'INTERNET',
   }
   if (teks == 'islam') tags = {
-  'islam' : 'ISLAMI',
+  'islam' : 'MENU ISLAMI',
   }
   if (teks == 'kerang') tags = {
-  'kerang': 'KERANG',
+  'kerang': 'MENU KERANG',
   }
   if (teks == 'maker') tags = {
-  'maker': 'MAKER',
+  'maker': 'MENU MAKER',
   }
   if (teks == 'owner') tags = {
     'owner': 'Owner',
@@ -155,37 +154,37 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   'text': 'MAKER TEXT',
   }
   if (teks == 'premium') tags = {
-  'premium': 'PREMIUM',
+  'premium': 'PREMIUM MENU',
   }
   if (teks == 'quotes') tags = {
-  'quotes' : 'QUOTES',
+  'quotes' : 'MENU QUOTES',
   }
   if (teks == 'rpg') tags = {
-  'rpg': 'RPG',
+  'rpg': 'MENU RPG',
   }
   if (teks == 'stalk') tags = {
-  'stalk': 'STALK',
+  'stalk': 'MENU STALK',
   }
   if (teks == 'shortlink') tags = {
   'shortlink': 'SHORT LINK',
   }
   if (teks == 'tools') tags = {
-  'tools': 'TOOLS',
+  'tools': 'MENU TOOLS',
   }
   if (teks == 'nsfw') tags = {
-  'nsfw': 'NSFW', 
+  'nsfw': 'NSFW MENU', 
   }
   if (teks == 'asupan') tags = {
-  'asupan': 'ASUPAN', 
+  'asupan': 'ASUPAN MENU', 
   }
   if (teks == 'random') tags = {
-  'random': 'RANDOM', 
+  'random': 'RANDOM MENU', 
   }
   if (teks == 'textpro') tags = {
-  'textpro': 'TEXT PRO', 
+  'textpro': 'TEXT PRO MENU', 
   }
   if (teks == 'photooxy') tags = {
-  'photooxy': 'PHOTO OXY', 
+  'photooxy': 'PHOTO OXY MENU', 
   }
 
 //━━━━━━━━[ DATABASE USER ]━━━━━━━━//
@@ -297,11 +296,9 @@ const fdoc = {
 //━━━━━━━━[ BAGIAN MENU ]━━━━━━━━//
 if (teks == '404') {
 let menuu = `────━⃝┅ *D A S H B O A R D* ┅⃝━────
-
 「 *I N F O  C M D* 」
 *Ⓟ* = Premium
 *Ⓛ* = Limit
-
          「 *Ʋser Ɩnfσrmαtισn* 」
 🌸• *ɴᴀᴍᴇ:* ${name}
 🌸• *ᴛᴀɢs:* ${tag}
@@ -310,9 +307,6 @@ let menuu = `────━⃝┅ *D A S H B O A R D* ┅⃝━────
 🌸• *ʟɪᴍɪᴛ:* ${limit}
 🌸• *ʟᴇᴠᴇʟ:* ${level}
 🌸• *ʀᴏʟᴇ:* ${role}
-
-
-
          「 *Bσt Ɩnfσrmαtισn* 」
 🎐• *ᴜᴘᴛɪᴍᴇ:* ${uptime}
 🎐• *ᴛɪᴍᴇ:* ${wib} WIB
@@ -320,10 +314,7 @@ let menuu = `────━⃝┅ *D A S H B O A R D* ┅⃝━────
 🎐• *ᴄʜᴀᴛ ᴛᴇʀʙᴀɴɴᴇᴅ:* ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length} Chat
 🎐• *ᴘᴇɴɢɢᴜɴᴀ ᴛᴇʀʙᴀɴɴᴇᴅ:* ${Object.entries(global.db.data.users).filter(user => user[1].banned).length} Pengguna
 🎐• *ᴍᴏᴅᴇ:* ${global.opts['self'] ? 'Self' : 'publik'}
-
-
                「 *𝐀𝐧𝐝𝐡𝐲𝐜𝐚-𝐌𝐝ོ BOT あ⁩* 」
-
 ⫹⫺ 𝗧𝗶𝗺𝗲 𝗦𝗲𝗿𝘃𝗲𝗿 : ${time}
 ⫹⫺ 𝗗𝗮𝘁𝗲 𝗦𝗲𝗿𝘃𝗲𝗿 : ${date}
 `
@@ -541,8 +532,8 @@ const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fro
             hydratedFooterText: wm2, 
             hydratedButtons: [{
             urlButton: {
-               displayText: 'Saweria',
-               url: webm
+               displayText: 'Website Creator',
+               url: web
              }
 
            },
@@ -555,7 +546,7 @@ const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fro
            },
                {
              quickReplyButton: {
-               displayText: 'Pemilik Bot',
+               displayText: 'Owner',
                id: '.owner',
              }
 
@@ -569,7 +560,7 @@ const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fro
            },
            {
              quickReplyButton: {
-               displayText: ' Thanks To',
+               displayText: 'Credits',
                id: '.tqto',
              }
            }]
@@ -587,21 +578,21 @@ const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fro
     throw e
   }
 }
-handler.help = ['Krizyn']
+handler.help = ['menu', 'help', '?']
 handler.tags = ['main']
-handler.command = /^(alive|panel|krizyn|menu|help|\?)$/i
-handler.register = true
+handler.command = /^(menu|help|\?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
-handler.register = false
+
 handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
 handler.exp = 3
+
 module.exports = handler
 
 //━━━━━━━━[  JANGAN DI UBAH  ]━━━━━━━━//
@@ -620,18 +611,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "tidur gih sana"
-  if (time >= 5) {
-    res = "Selamat pagi🌅 kak"
+  res = "Selamat DiniHari"
+  if (time >= 4) {
+    res = "Selamat Pagi"
   }
   if (time > 10) {
-    res = "Selamat siang🏜️ kak"
+    res = "Selamat Siang"
   }
   if (time >= 15) {
-    res = "Selamat sore🌄 kak"
+    res = "Selamat Sore"
   }
   if (time >= 18) {
-    res = "Selamat malam🌌 kak"
+    res = "Selamat Malam"
   }
   return res
 }
